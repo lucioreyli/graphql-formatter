@@ -18,6 +18,15 @@ fn main() {
     if args.len() < 2 {
         panic!("Expected path");
     }
+
+    let mut is_quiet = false;
+
+    for arg in args.iter() {
+        if arg == "--quiet" || arg == "-q" {
+            is_quiet = true;
+        }
+    }
+
     let root_path = Path::new(&args[1]);
     if !root_path.exists() {
         panic!("Path doesn't exists");
@@ -29,6 +38,8 @@ fn main() {
             continue;
         }
         format_file(entry.path());
-        println!("Formatted: {}", entry.path().display());
+        if !is_quiet {
+            println!("Formatted: {}", entry.path().display());
+        }
     }
 }
