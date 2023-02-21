@@ -18,7 +18,7 @@ This is the available parameters:
 | Quiet mode  | `-q` or `--quiet` | Quiet mode doesn't produce logs while formating files.  |
 
 ## Install
-You can install [downloading the last release (binary)](https://github.com/lucioroadtoglory/graphql-formatter/releases) or build cloning this repository.
+You can install [downloading the last release (binary)](https://github.com/lucioroadtoglory/graphql-formatter/releases/latest) or build cloning this repository.
 
 You just need run:
 ```bash
