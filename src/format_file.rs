@@ -15,8 +15,10 @@ pub fn format_file(file_path: &Path) {
         .read(true)
         .open(&file_path)
         .expect("unable to open file");
+
     let mut file_content = String::new();
     gql_file.read_to_string(&mut file_content).unwrap();
+
     let formatted_query_file = parse_query::<&str>(&file_content).unwrap_or(QueryDocument {
         definitions: vec![],
     });

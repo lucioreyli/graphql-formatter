@@ -2,6 +2,9 @@ use std::path::Path;
 
 use walkdir::{DirEntry, WalkDir};
 
+mod config;
+use config::Config;
+
 mod format_file;
 use format_file::format_file;
 
@@ -19,11 +22,11 @@ fn main() {
         panic!("Expected path");
     }
 
-    let mut is_quiet = false;
+    let mut config = Config::new();
 
     for arg in args.iter() {
         if arg == "--quiet" || arg == "-q" {
-            is_quiet = true;
+            config.quiet_mode = true;
         }
     }
 
@@ -38,8 +41,10 @@ fn main() {
             continue;
         }
         format_file(entry.path());
-        if !is_quiet {
+        if !config.quiet_mode {
             println!("Formatted: {}", entry.path().display());
         }
     }
+
+    println!("✨ Done!");
 }

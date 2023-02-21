@@ -10,6 +10,12 @@ The graphql-formatter can format files with this extensions:
 | Schema file         | .graphql       | schema.graphql         |
 | Query/Mutation file | .gql           | loginWithEmail.gql     |
 
+## Configuration | Arguments
+This is the available parameters:
+
+| Name        | Usage             | Description                                             |
+|-------------|-------------------|---------------------------------------------------------|
+| Quiet mode  | `-q` or `--quiet` | Quiet mode doesn't produce logs while formating files.  |
 
 ## Install
 You can install [downloading the last release (binary)](https://github.com/lucioroadtoglory/graphql-formatter/releases) or build cloning this repository.
