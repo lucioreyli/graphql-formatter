@@ -32,10 +32,10 @@ pub fn format_file(file_path: &Path) {
         .open(file_path)
         .expect("unable to open file");
 
-    let gql_formatted_content = if formatted_query_file.definitions.len() != 0 {
-        String::from(formatted_query_file.to_string())
+    let gql_formatted_content = if !formatted_query_file.definitions.is_empty() {
+        formatted_query_file.to_string()
     } else {
-        String::from(formatted_schema_file.to_string())
+        formatted_schema_file.to_string()
     };
 
     gql_file
