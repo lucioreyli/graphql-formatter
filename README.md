@@ -10,6 +10,14 @@ The graphql-formatter can format files with this extensions:
 | Schema file         | .graphql       | schema.graphql         |
 | Query/Mutation file | .gql           | loginWithEmail.gql     |
 
+## Topics
+
+[1. Configuration | Arguments](#configuration--arguments)
+
+[2. Install](#install)
+
+[3. Running | Quick start](#running--quick-start)
+
 ## Configuration | Arguments
 This is the available parameters:
 
