@@ -19,3 +19,6 @@ jobs:
 
       - name: Test Rust
         run: cargo test
+
+      - name: Clippy test
+        run: cargo clippy --all -- -D warnings
