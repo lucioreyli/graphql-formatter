@@ -3,10 +3,9 @@ use std::path::Path;
 use walkdir::{DirEntry, WalkDir};
 
 mod config;
-use config::Config;
-
+use self::config::Config;
 mod format_file;
-use format_file::format_file;
+use self::format_file::format_file;
 
 fn is_gql_file(entry: &DirEntry) -> bool {
     entry
